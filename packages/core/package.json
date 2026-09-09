@@ -1,0 +1,28 @@
+{
+  "name": "@nctools/core",
+  "version": "1.0.0",
+  "description": "Shared CLI infrastructure for nctools command-line tools.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./dist/*"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "nctools-cli",
+  "version": "1.0.0",
+  "description": "nctools.eu command-line tools — every website tool as a standalone CLI, plus a meta package to install them all.",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "cli"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "bootstrap": "npm install --workspaces",
+    "test": "npm run test -ws --if-present",
+    "lint": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pdf",
+    "cli",
+    "document-conversion",
+    "ocr",
+    "nctools",
+    "pdf-to-word",
+    "pdf-to-excel",
+    "paste-to-pdf"
+  ],
+  "license": "MIT"
+}

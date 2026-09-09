@@ -1,0 +1,32 @@
+{
+  "name": "@nctools/paste-to-pdf",
+  "version": "1.0.0",
+  "description": "CLI: turn pasted text into a polished PDF (website: /tools/paste-to-pdf).",
+  "type": "module",
+  "bin": {
+    "nctools-paste-to-pdf": "./bin/paste-to-pdf.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "bin"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nctools/core": "^1.0.0",
+    "commander": "^12.1.0",
+    "pdfkit": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pdfkit": "^0.13.7",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}
