@@ -11,6 +11,7 @@
   "scripts": {
     "build": "npm run build -ws",
     "bootstrap": "npm install --workspaces",
+    "link": "npm link -w @nctools/cli",
     "test": "npm run test -ws --if-present",
     "lint": "tsc --noEmit -p tsconfig.json"
   },
