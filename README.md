@@ -13,6 +13,9 @@ package installs all of them into a single `nctools` command.
 | `@nctools/pdf-to-excel` | `nctools-pdf-to-excel` | `/tools/pdf-to-excel` |
 | `@nctools/pdf-to-ocr` | `nctools-pdf-to-ocr` | `/tools/pdf-to-ocr` |
 | `@nctools/ocr-to-text` | `nctools-ocr-to-text` | `/tools/ocr-to-text` |
+| `@nctools/photo-scanner` | `nctools-photo-scanner` | `/tools/photo-scanner` |
+| `@nctools/images-to-pdf` | `nctools-images-to-pdf` | `/tools/images-to-pdf` |
+| `@nctools/merge-pdf` | `nctools-merge-pdf` | `/tools/merge-pdf` |
 
 ## Install
 
@@ -47,6 +50,16 @@ nctools-pdf-to-ocr --input scan.pdf --lang eng+sk
 
 # OCR to Text
 nctools-ocr-to-text --input image.png --output out.txt
+
+# Photo Scanner (image → PDF or text)
+nctools-photo-scanner --input scan.png --mode pdf          # → scan.pdf
+nctools-photo-scanner --input scan.png --mode text --lang eng  # OCR → scan.txt
+
+# Images to PDF (combine several)
+nctools-images-to-pdf a.png b.jpg c.png --output mix.pdf
+
+# Merge PDF (combine several)
+nctools-merge-pdf part1.pdf part2.pdf --output merged.pdf
 ```
 
 ### Meta command
@@ -54,6 +67,8 @@ nctools-ocr-to-text --input image.png --output out.txt
 ```bash
 nctools paste-to-pdf --input notes.txt --output notes.pdf
 nctools pdf-to-word --input doc.pdf --output doc.docx
+nctools photo-scanner --input scan.png --mode text
+nctools merge-pdf a.pdf b.pdf
 nctools --help
 nctools <tool> --help
 ```

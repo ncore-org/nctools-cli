@@ -1,0 +1,31 @@
+{
+  "name": "@nctools/images-to-pdf",
+  "version": "1.0.0",
+  "description": "CLI: combine multiple images (JPG/PNG/WebP) into one PDF (website: /tools/images-to-pdf).",
+  "type": "module",
+  "bin": {
+    "nctools-images-to-pdf": "./bin/images-to-pdf.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "bin"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nctools/core": "^1.0.0",
+    "commander": "^12.1.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}

@@ -25,6 +25,9 @@
     "@nctools/pdf-to-excel": "^1.0.0",
     "@nctools/pdf-to-ocr": "^1.0.0",
     "@nctools/ocr-to-text": "^1.0.0",
+    "@nctools/photo-scanner": "^1.0.0",
+    "@nctools/images-to-pdf": "^1.0.0",
+    "@nctools/merge-pdf": "^1.0.0",
     "commander": "^12.1.0"
   },
   "devDependencies": {

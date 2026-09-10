@@ -9,6 +9,9 @@ import pdfToWordCli from "@nctools/pdf-to-word";
 import pdfToExcelCli from "@nctools/pdf-to-excel";
 import pdfToOcrCli from "@nctools/pdf-to-ocr";
 import ocrToTextCli from "@nctools/ocr-to-text";
+import photoScannerCli from "@nctools/photo-scanner";
+import imagesToPdfCli from "@nctools/images-to-pdf";
+import mergePdfCli from "@nctools/merge-pdf";
 
 export interface MetaCliOptions {
   commandName?: string;
@@ -29,6 +32,9 @@ export function buildMetaCli(opts: MetaCliOptions = {}): Command {
   program.addCommand(pdfToExcelCli("pdf-to-excel"));
   program.addCommand(pdfToOcrCli("pdf-to-ocr"));
   program.addCommand(ocrToTextCli("ocr-to-text"));
+  program.addCommand(photoScannerCli("photo-scanner"));
+  program.addCommand(imagesToPdfCli("images-to-pdf"));
+  program.addCommand(mergePdfCli("merge-pdf"));
 
   // Provide `nctools tools` listing.
   program
@@ -41,6 +47,9 @@ export function buildMetaCli(opts: MetaCliOptions = {}): Command {
         ["pdf-to-excel", "Extract PDF tables to XLSX"],
         ["pdf-to-ocr", "Make PDFs searchable"],
         ["ocr-to-text", "Extract text from images"],
+        ["photo-scanner", "Scan an image to PDF or text"],
+        ["images-to-pdf", "Combine images into one PDF"],
+        ["merge-pdf", "Merge multiple PDFs into one"],
       ];
       process.stdout.write("Available nctools tools:\n\n");
       for (const [t, d] of tools) {

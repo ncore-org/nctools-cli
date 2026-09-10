@@ -1,0 +1,32 @@
+{
+  "name": "@nctools/photo-scanner",
+  "version": "1.0.0",
+  "description": "CLI: scan an image into PDF or extracted text (website: /tools/photo-scanner).",
+  "type": "module",
+  "bin": {
+    "nctools-photo-scanner": "./bin/photo-scanner.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "bin"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nctools/core": "^1.0.0",
+    "commander": "^12.1.0",
+    "pdf-lib": "^1.17.1",
+    "tesseract.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}

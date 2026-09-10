@@ -42,7 +42,7 @@ export function createToolCli(spec: CliSpec): Command {
     // then the Command. Reading the Command.opts() is the robust way.
     const command = hookArgs[hookArgs.length - 1] as Command;
     const rawOpts = command.opts() as Record<string, unknown>;
-    const positional = hookArgs.slice(0, -2);
+    const positional = (command.args as unknown[]) ?? [];
     const logger = new Logger({
       quiet: Boolean((rawOpts as { quiet?: boolean }).quiet),
       json: Boolean((rawOpts as { json?: boolean }).json),
